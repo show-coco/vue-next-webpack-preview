@@ -1,13 +1,15 @@
 <template>
-  <img src="./logo.png">
-  <h1>Hello Vue 3!</h1>
-  <button @click="inc">Clicked {{ count }} times.</button>
+  <div>
+    <img src="./logo.png">
+    <button @click="inc">Clicked {{ count }} times.</button>
+    <h1>Hello Vue 3!</h1>
+  </div>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script lang="ts">
+import { ref, defineComponent } from 'vue'
 
-export default {
+export default defineComponent({
   setup() {
     const count = ref(0)
     const inc = () => {
@@ -19,7 +21,7 @@ export default {
       inc
     }
   }
-}
+})
 </script>
 
 <style scoped>
